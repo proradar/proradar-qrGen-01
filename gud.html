@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body id="body">
+    <div>
+        <h1>LOL, OMG I KILLED NINJA FORNITE AWESOME NUDE GIRLS IN YOUTUBE(NOT CLICKBAIT)</h1>
+        <h2>LMAO!!!!! LUXTAG IS AWSOME!!!! LOLLLLLLLALSLDLALLSDLLWALFL</h2>
+        <h2 id="ignorePDF">DONT PRINT DIS!!!! CENSORED STUFF!!!!</h2>
+    </div>
+    <button onclick="pdf()">PDF Transform</button>
+</body>
+</html>
+<script>
+    function pdf() {
+        var doc = new jsPDF();
+        var elementHandler = {
+            '#ignorePDF': function (element, renderer) {
+                return true;
+            }
+        };
+        var source = window.document.getElementById("body");
+        doc.fromHTML(
+            source,
+            15,
+            15,
+            {
+                'width': 180, 'elementHandlers': elementHandler
+            });
+        doc.save('gud.pdf')
+    }
+</script>
+<style>
+body {
+    background-color: #ffd6d6;
+}
+h1 {
+    color: #df6cdf;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+h2 {
+    color: #ffa600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+}
+button {
+    border-radius: 20px;
+    background-color: rgb(255, 181, 22);
+    border-style: solid;
+    border-color: transparent;
+}
+</style>
